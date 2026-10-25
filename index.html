@@ -1,0 +1,796 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To My Baby Girl ♡</title>
+
+  <style>
+    :root {
+      --pink: #ff91d8;
+      --light-pink: #ffd2ed;
+      --purple: #bba0ff;
+      --white: #fff4ff;
+      --glass: rgba(23, 22, 68, 0.68);
+      --border: rgba(210, 176, 255, 0.4);
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--white);
+      font-family: Georgia, "Times New Roman", serif;
+      background:
+        radial-gradient(ellipse at 15% 15%, #28205d 0, transparent 42%),
+        radial-gradient(ellipse at 85% 65%, #251044 0, transparent 45%),
+        linear-gradient(180deg, #080b2b, #111039 55%, #080b25);
+      overflow-x: hidden;
+    }
+
+    button {
+      font: inherit;
+      cursor: pointer;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .stars {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      opacity: 0.55;
+      background-image:
+        radial-gradient(2px 2px at 20px 30px, white, transparent),
+        radial-gradient(1px 1px at 80px 110px, #ffc8ef, transparent),
+        radial-gradient(2px 2px at 160px 70px, white, transparent),
+        radial-gradient(1px 1px at 220px 180px, #d6c5ff, transparent);
+      background-size: 260px 220px;
+    }
+
+    .hero {
+      min-height: 94vh;
+      padding: 75px 20px 55px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      background:
+        radial-gradient(ellipse at 50% 20%, rgba(94, 65, 151, 0.32), transparent 58%);
+    }
+
+    .eyebrow {
+      color: var(--light-pink);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font: 11px Arial, sans-serif;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(48px, 8vw, 88px);
+      line-height: 0.98;
+      font-style: italic;
+      font-weight: normal;
+      margin: 0 0 24px;
+      text-shadow: 0 0 30px rgba(255, 145, 216, 0.28);
+    }
+
+    h1 span {
+      color: var(--pink);
+    }
+
+    .hero p {
+      max-width: 560px;
+      font-size: 18px;
+      line-height: 1.7;
+      margin: 0 auto 18px;
+    }
+
+    .anniversary-date {
+      color: var(--light-pink);
+      font-style: italic;
+      margin-bottom: 25px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+
+    .button {
+      border: 1px solid rgba(255, 205, 247, 0.75);
+      border-radius: 999px;
+      padding: 12px 20px;
+      color: white;
+      background: linear-gradient(110deg, #9d4bd6, #df4ea6);
+      box-shadow: 0 0 22px rgba(225, 91, 195, 0.16);
+      transition: transform 0.2s, filter 0.2s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.12);
+    }
+
+    .button.secondary {
+      background: rgba(18, 18, 57, 0.72);
+    }
+
+    .scroll-note {
+      margin-top: 38px;
+      color: #d8c8ff;
+      font: 10px Arial, sans-serif;
+      letter-spacing: 2px;
+    }
+
+    .moon {
+      position: absolute;
+      top: 55px;
+      right: 10%;
+      color: #ffd0dc;
+      font-size: 66px;
+      text-shadow: 0 0 30px #ff9dce;
+    }
+
+    .floating-heart {
+      position: fixed;
+      z-index: 0;
+      color: var(--pink);
+      pointer-events: none;
+      opacity: 0.7;
+      animation: float 7s ease-in-out infinite;
+    }
+
+    .heart-one { top: 22%; left: 7%; font-size: 20px; }
+    .heart-two { top: 58%; right: 7%; font-size: 15px; animation-delay: 2s; }
+    .heart-three { top: 78%; left: 4%; font-size: 13px; animation-delay: 4s; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(-8deg); }
+      50% { transform: translateY(-18px) rotate(8deg); }
+    }
+
+    main {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    section {
+      padding: 55px 0;
+      border-bottom: 1px solid rgba(190, 163, 255, 0.2);
+    }
+
+    .section-label {
+      color: #cbb8ff;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font: 10px Arial, sans-serif;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: normal;
+      margin: 0 0 14px;
+    }
+
+    h3 {
+      font-size: 22px;
+      font-weight: normal;
+      margin: 0 0 10px;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .intro {
+      color: #dfd5ff;
+      line-height: 1.6;
+      margin-top: 0;
+    }
+
+    .two-columns {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 26px;
+      align-items: start;
+    }
+
+    .panel {
+      background: var(--glass);
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      padding: 22px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    .letter {
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    .letter p {
+      margin: 0 0 12px;
+    }
+
+    .signature {
+      color: var(--pink);
+      font-style: italic;
+      text-align: right;
+      font-size: 20px;
+      margin-top: 18px;
+    }
+
+    .counter {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 7px;
+      padding: 10px;
+      margin: 18px 0 12px;
+      border: 1px solid #a98be9;
+      border-radius: 15px;
+    }
+
+    .counter-box {
+      padding: 12px 4px;
+      text-align: center;
+      background: rgba(148, 115, 227, 0.12);
+      border: 1px solid rgba(202, 177, 255, 0.14);
+      border-radius: 9px;
+    }
+
+    .counter-number {
+      font: bold clamp(21px, 3vw, 30px) Arial, sans-serif;
+      color: var(--light-pink);
+    }
+
+    .counter-label {
+      font: 9px Arial, sans-serif;
+      letter-spacing: 1px;
+      color: #d3c6ff;
+      margin-top: 7px;
+    }
+
+    .small-note {
+      font-size: 12px;
+      color: #d5c9ff;
+      line-height: 1.6;
+    }
+
+    .music-area {
+      border-top: 1px solid rgba(190, 163, 255, 0.2);
+      margin-top: 22px;
+      padding-top: 20px;
+    }
+
+    #ourSong {
+      display: none;
+    }
+
+    .music-button {
+      display: block;
+      margin: 15px auto 0;
+      width: fit-content;
+      max-width: 100%;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 30px;
+    }
+
+    .timeline-item {
+      padding: 18px 12px;
+      border-top: 1px solid #9c78df;
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: "♡";
+      position: absolute;
+      top: -17px;
+      left: 12px;
+      background: #111039;
+      padding: 0 6px;
+      color: var(--pink);
+      font-size: 24px;
+    }
+
+    .timeline-item h3 {
+      font-size: 18px;
+      color: var(--light-pink);
+      margin-top: 8px;
+    }
+
+    .timeline-item p {
+      font-size: 14px;
+      line-height: 1.65;
+      color: #e5ddff;
+    }
+
+
+    .secret-card {
+      max-width: 720px;
+      margin: 25px auto 0;
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .heart-button {
+      border: none;
+      background: transparent;
+      color: #ff72c8;
+      font-size: 90px;
+      text-shadow: 0 0 28px rgba(255, 90, 195, 0.8);
+      transition: transform 0.3s;
+    }
+
+    .heart-button:hover {
+      transform: scale(1.12);
+    }
+
+    .heart-side {
+      text-align: center;
+      border-right: 1px solid var(--border);
+      padding-right: 18px;
+    }
+
+    .secret-message {
+      display: none;
+      margin-top: 20px;
+      color: var(--light-pink);
+      font-size: 19px;
+      line-height: 1.8;
+      animation: fadeIn 0.7s ease;
+    }
+
+    .secret-message.show {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      padding: 50px 20px 35px;
+      text-align: center;
+      color: #ded1ff;
+      line-height: 1.8;
+    }
+
+    footer h2 {
+      font-size: 27px;
+    }
+
+    .back-top {
+      margin-top: 18px;
+    }
+
+    @media (max-width: 760px) {
+      .hero {
+        min-height: 85vh;
+        padding-top: 80px;
+      }
+
+      .moon {
+        top: 22px;
+        right: 6%;
+        font-size: 43px;
+      }
+
+      .two-columns {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .secret-card {
+        grid-template-columns: 1fr;
+      }
+
+      .heart-side {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        padding: 0 0 20px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .timeline {
+        grid-template-columns: 1fr;
+      }
+
+      .counter {
+        gap: 4px;
+        padding: 6px;
+      }
+
+      .counter-box {
+        padding: 10px 2px;
+      }
+
+      .counter-label {
+        font-size: 8px;
+      }
+
+      .panel {
+        padding: 17px;
+      }
+
+      .letter {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="stars"></div>
+  <div class="floating-heart heart-one">♥</div>
+  <div class="floating-heart heart-two">♥</div>
+  <div class="floating-heart heart-three">♥</div>
+
+  <!-- HERO -->
+  <header class="hero" id="top">
+    <div class="moon">☾</div>
+
+    <div class="eyebrow">♥ A little universe, just for you ♥</div>
+
+    <h1>To My<br><span>Baby Girl ♡</span></h1>
+
+    <p>
+      If I could send you one thing across all these miles,
+      it would be a little piece of how much you mean to me.
+    </p>
+
+    <div class="anniversary-date">
+      October 26 · Our second month together
+    </div>
+
+    <div class="buttons">
+      <button class="button" onclick="toggleMusic()" id="musicBtn">
+        ♫ Play our song — Until I Found You ♡
+      </button>
+
+      <button class="button secondary"
+              onclick="openSurprise()">
+        Open your little surprise ♡
+      </button>
+    </div>
+
+    <div class="scroll-note">SCROLL DOWN ↓</div>
+  </header>
+
+  <main>
+    <!-- LETTER + COUNTER -->
+    <section>
+      <div class="two-columns">
+
+        <div>
+          <div class="section-label">A letter from my heart</div>
+          <h2>For you, my love ♡</h2>
+
+          <div class="panel letter">
+            <p>My baby girl,</p>
+
+            <p>
+              Thank you for being part of my life. Even with all
+              these miles between us, you make my days special.
+              These two months mean so much to me, and I look
+              forward to all the memories we still have to make
+              together.
+            </p>
+
+            <p>
+              Thank you for staying by my side, even on the days
+              I feel down and sad. Thank you for making me your
+              priority, for making me feel more secure, and for
+              reminding me that I am worthy of love.
+            </p>
+
+            <p>
+              I know I wasn't the first guy in your life, but I'm
+              ready to keep choosing you and building something
+              beautiful with you. I don't want our story to be
+              about who came first. I want it to be about the
+              love, trust, laughter, and memories we create
+              together.
+            </p>
+
+            <p>
+              I love you so much, my baby. ❤️
+            </p>
+
+            <p>
+              Happy two months to us. Here's to all the little
+              moments, all the silly conversations, all the
+              dreams, and all the days still waiting for us.
+            </p>
+
+            <div class="signature">Forever cheering for us, ♡</div>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-label">Our little story</div>
+          <h2>Time since we began ☾</h2>
+          <p class="intro">Every day is another page in our story.</p>
+
+          <div class="counter">
+            <div class="counter-box">
+              <div class="counter-number" id="days">00</div>
+              <div class="counter-label">DAYS</div>
+            </div>
+
+            <div class="counter-box">
+              <div class="counter-number" id="hours">00</div>
+              <div class="counter-label">HOURS</div>
+            </div>
+
+            <div class="counter-box">
+              <div class="counter-number" id="minutes">00</div>
+              <div class="counter-label">MINUTES</div>
+            </div>
+
+            <div class="counter-box">
+              <div class="counter-number" id="seconds">00</div>
+              <div class="counter-label">SECONDS</div>
+            </div>
+          </div>
+
+          <p class="small-note center">
+            Since August 26, 2026 · Every moment counts.
+          </p>
+
+          <div class="music-area">
+            <div class="section-label">Our song ♫</div>
+            <h3>Until I Found You ♡</h3>
+
+            <audio id="ourSong" preload="none" loop>
+              <source src="oursong.mp3" type="audio/mpeg">
+              Your browser does not support audio playback.
+            </audio>
+
+            <button class="button music-button" onclick="toggleMusic()" id="musicBtn2">
+              ♫ Play our song — Until I Found You ♡
+            </button>
+
+            <p class="small-note center">
+              Click the button to start the music. You can pause
+              or play anytime.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section>
+      <div class="center">
+        <div class="section-label">Chapter one, and many more</div>
+        <h2>Our little timeline ✨</h2>
+        <p class="intro">
+          A few milestones in our story. The best chapters are still ahead.
+        </p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>August 26 — The beginning 💗</h3>
+          <p>
+            The day our relationship began, and a new chapter
+            opened for us.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>September — Growing closer 🌹</h3>
+          <p>
+            Another month of learning about each other, sharing
+            our days, and building trust.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>October 26 — Two months of us ☾</h3>
+          <p>
+            A little celebration of what we have and all the
+            memories we have yet to make.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Our next chapters ♡</h3>
+          <p>
+            More conversations, more laughter, more understanding,
+            and more moments to look forward to.
+          </p>
+        </div>
+      </div>
+
+     
+    
+      </div>
+    </section>
+
+    <!-- SURPRISE -->
+    <section>
+      <div class="center">
+        <div class="section-label">One last little thing</div>
+        <h2>A tiny secret for you 💝</h2>
+      </div>
+
+      <div class="panel secret-card">
+        <div class="heart-side">
+          <button class="heart-button"
+                  onclick="openSurprise()"
+                  aria-label="Open your surprise">
+            ♥
+          </button>
+          <div class="small-note">
+            Tap the heart to open<br>your surprise
+          </div>
+        </div>
+
+        <div>
+          <p>
+            Even when the sky feels cloudy, you don't have to be
+            perfect or happy every day to be loved.
+          </p>
+
+          <p>
+            You matter to me, your feelings matter, and I want us
+            to keep learning, growing, and choosing each other
+            with kindness.
+          </p>
+
+          <p>
+            Distance may separate our places, but we can still
+            make beautiful memories, one day at a time.
+          </p>
+
+          <div class="signature">
+            Happy second month, my baby girl. I love you. ❤️☾
+          </div>
+
+          <div id="secretMessage" class="secret-message">
+            If I could make one wish today, it would be for us to
+            keep growing together, to keep making each other
+            smile, and to have many more anniversaries to
+            celebrate. No matter how far apart we are today,
+            you have a special place in my heart. ❤️
+
+            <br><br>
+            You are one of my favorite parts of this story. ♡
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div style="font-size: 30px;">☾</div>
+    <h2>Until our next memory...</h2>
+
+    <p>
+      Thank you for being you. Thank you for being part of my story.
+      <br>
+      Here's to our little universe and the memories yet to come.
+    </p>
+
+    <div class="signature center">I love you, baby girl. ♡</div>
+
+    <button class="button secondary back-top"
+            onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+      Back to the beginning ↑
+    </button>
+
+    <p class="small-note">
+      Made with love, just for my baby girl ♡
+      <br>
+      August 26 — October 26
+    </p>
+  </footer>
+
+  <script>
+    // Relationship start date: August 26, 2026.
+    const startDate = new Date(2026, 7, 26, 0, 0, 0);
+
+    function updateCounter() {
+      const now = new Date();
+      let difference = Math.max(0, now.getTime() - startDate.getTime());
+
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      difference %= 1000 * 60 * 60 * 24;
+
+      const hours = Math.floor(difference / (1000 * 60 * 60));
+      difference %= 1000 * 60 * 60;
+
+      const minutes = Math.floor(difference / (1000 * 60));
+      difference %= 1000 * 60;
+
+      const seconds = Math.floor(difference / 1000);
+
+      document.getElementById("days").textContent = days;
+      document.getElementById("hours").textContent =
+        String(hours).padStart(2, "0");
+      document.getElementById("minutes").textContent =
+        String(minutes).padStart(2, "0");
+      document.getElementById("seconds").textContent =
+        String(seconds).padStart(2, "0");
+    }
+
+    updateCounter();
+    setInterval(updateCounter, 1000);
+
+    // Local MP3 player. Keep oursong.mp3 in the same folder as index.html.
+    const ourSong = document.getElementById("ourSong");
+
+    function updateMusicButtons(label) {
+      document.getElementById("musicBtn").textContent = label;
+      document.getElementById("musicBtn2").textContent = label;
+    }
+
+    async function toggleMusic() {
+      if (ourSong.paused) {
+        try {
+          await ourSong.play();
+          updateMusicButtons("Ⅱ Pause our song ♡");
+        } catch (error) {
+          updateMusicButtons("Couldn't play song — check MP3");
+          console.error("Audio playback failed:", error);
+        }
+      } else {
+        ourSong.pause();
+        updateMusicButtons("♫ Play our song — Until I Found You ♡");
+      }
+    }
+
+    ourSong.addEventListener("ended", function () {
+      updateMusicButtons("♫ Play our song — Until I Found You ♡");
+    });
+
+    ourSong.addEventListener("error", function () {
+      updateMusicButtons("Audio unavailable — check oursong.mp3");
+    });
+
+    // Reveal the surprise message.
+    function openSurprise() {
+      const message = document.getElementById("secretMessage");
+      message.classList.toggle("show");
+
+      if (message.classList.contains("show")) {
+        message.scrollIntoView({
+          behavior: "smooth",
+          block: "center"
+        });
+      }
+    }
+  </script>
+</body>
+</html>
